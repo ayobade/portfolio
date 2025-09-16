@@ -20,19 +20,44 @@ function Center() {
     }
   };
 
-  return (
-    <main className="content">
-      <section id="intro" className="intro-section">
-        <div className="intro-text">
-          <div className="intro-line">A CREATIVE</div>
-          <div className="intro-line">SPECIALIZED IN</div>
-          <div className="intro-line rotating-text">
-            {texts.map((text, index) => (
-              <span key={index}>{text}</span>
-            ))}
+    return (
+        <main className="content">
+        <section id="intro" className="intro-section">
+          <div className="intro-layout">
+            
+            <div className="main-title">
+              CREATIVE 
+              <div className="rotating-text">
+                <span>DESIGNER.</span>
+                <span>DEVELOPER.</span>
+                <span>3D ARTIST.</span>
+              </div>
+            </div>
+            
+            <div className="content-area">
+              <div className="skills-section">
+                <div className="skills-list">
+                  <div>PRODUCT DESIGNER(UI/UX)</div>
+                  <div>WEB DEVELOPER</div>
+                  <div>MOTION DESIGNER</div>
+                  <div>3D ARTIST</div>
+                </div>
+              </div>
+              
+              <div className="profile-section">
+                <img src="/public/heroimg.png" alt="Makinde Ayobade" className="profile-image" />
+              </div>
+              
+              <div className="latest-work">
+                <div className="latest-label">LATEST WORK</div>
+                <div className="work-title">MAKINDE'S</div>
+              </div>
+            </div>
+            
+            
+        
           </div>
-        </div>
-      </section>
+        </section>
       <section id="about" className="about-section">
         <div className="about-content">
           <div className="about-text">
@@ -243,7 +268,7 @@ function Center() {
           </div>
         </div>
       </section>
-    </main>
+        </main>
   );
 }
 

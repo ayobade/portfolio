@@ -11,7 +11,7 @@ function Sidebar() {
           <a href="#projects">Projects</a>
           <a href="#projects">Services</a>
           <a href="#fun">Fun</a>
-          <a href="#projects">Contact</a>
+         
         </nav>
         <div className="social">
         
