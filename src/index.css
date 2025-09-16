@@ -1,0 +1,13 @@
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body { margin: 0; font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; background: url('/bg3.jpg') center / cover no-repeat fixed; }
+
+#noise-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: rgba(0,0,0,0.15);
+  filter: url(#noiseFilter);
+  mix-blend-mode: overlay;
+}

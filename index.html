@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayobade</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <svg id="noise" xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+      <filter id="noiseFilter">
+        <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/>
+        <feColorMatrix type="saturate" values="0"/>
+      </filter>
+    </svg>
+    <div id="noise-overlay"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

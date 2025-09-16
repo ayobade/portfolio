@@ -1,0 +1,85 @@
+.layout {
+  display: flex;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 260px;
+  padding: 24px 20px;
+  background: transparent;
+  color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.nav a {
+  color: #eaeaea;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social a {
+  color: #c8c8c8;
+  text-decoration: none;
+}
+
+.content {
+  margin-left: 260px;
+  padding: 24px;
+  min-height: 100vh;
+  background: transparent;
+  color: #eaeaea;
+}
+
+.content section {
+  padding: 80px 0;
+  border-bottom: 1px solid #2a2f3a;
+}
+
+.top-right {
+  position: fixed;
+ 
+  right: 0px;
+  z-index: 1000;
+}
+
+.contact-btn {
+  display: inline-block;
+  background: #ffffff;
+  color: #0e0f12;
+  text-decoration: none;
+  padding: 20px 18px;
+  border-radius: 0px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.contact-btn span {
+  border-bottom: 2px solid #0e0f12;
+}
+
+
