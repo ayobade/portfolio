@@ -7,10 +7,11 @@ function Sidebar() {
         <div className="brand">Makinde Ayobade</div>
         <nav className="nav">
           <a href="#intro">Intro</a>
-          <a href="#work">Work</a>
+          <a href="#work">ABOUT ME</a>
           <a href="#projects">Projects</a>
+          <a href="#projects">Services</a>
           <a href="#fun">Fun</a>
-          <a href="#writings">Writings</a>
+          <a href="#projects">Contact</a>
         </nav>
         <div className="social">
         
