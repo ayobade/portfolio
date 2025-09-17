@@ -4,6 +4,12 @@ function Center() {
   const texts = ["PRODUCT DESIGN.", "WEB DEVELOPMENT.", "3D MODELLING"];
   const [copyText, setCopyText] = useState("COPY EMAIL");
   const [showCheckmark, setShowCheckmark] = useState(false);
+  const [activePreview, setActivePreview] = useState(null);
+  const previewSrcByKey = {
+    kb: "/public/preview-kb.jpeg",
+    bottle: "/public/preview-bottle.jpeg",
+    led: "/public/preview-led.png",
+  };
   
   const copyEmailToClipboard = async () => {
     try {
@@ -210,32 +216,71 @@ function Center() {
             <p className="fun-outro">Whether it's screen time or sunshine, I like to keep things fun and fast-paced. 🎮🏎️🎧</p>
           </div>
           
-          <div className="fun-gallery">
-            <div className="gallery-item">
-              <img src="/public/gaming.jpg" alt="Gaming setup" />
-              <div className="gallery-overlay">
-                <h3>Gaming</h3>
-              </div>
-            </div>
-            
-            <div className="gallery-item">
-              <img src="/public/f1.jpg" alt="Formula 1 racing" />
-              <div className="gallery-overlay">
-                <h3>Formula 1</h3>
-              </div>
-            </div>
-            
-            <div className="gallery-item">
-              <img src="/public/music.jpg" alt="Music studio" />
-              <div className="gallery-overlay">
-                <h3>Music</h3>
-              </div>
-            </div>
-            
-            <div className="gallery-item">
-              <img src="/public/outdoors.jpg" alt="Outdoor adventure" />
-              <div className="gallery-overlay">
-                <h3>Outdoors</h3>
+          <div className="fun-gallery single">
+            <div className="gallery-item hotspot-container">
+              <img src="/public/Fundesk.png" alt="Fun desk" />
+              <button
+                className="hotspot"
+                style={{left:'63%', top:'10%', width:'10%', height:'22%'}}
+                aria-label="Keyboard"
+                onMouseEnter={() => setActivePreview('kb')}
+                onMouseLeave={() => setActivePreview(null)}
+                onFocus={() => setActivePreview('kb')}
+                onBlur={() => setActivePreview(null)}
+                onClick={() => setActivePreview(activePreview === 'kb' ? null : 'kb')}
+              />
+              <button
+                className="hotspot"
+                style={{left:'82%', top:'53%', width:'10%', height:'22%'}}
+                aria-label="Bottle"
+                onMouseEnter={() => setActivePreview('bottle')}
+                onMouseLeave={() => setActivePreview(null)}
+                onFocus={() => setActivePreview('bottle')}
+                onBlur={() => setActivePreview(null)}
+                onClick={() => setActivePreview(activePreview === 'bottle' ? null : 'bottle')}
+              />
+              <button
+                className="hotspot"
+                style={{left:'50%', top:'45%', width:'10%', height:'22%'}}
+                aria-label="Bottle"
+                onMouseEnter={() => setActivePreview('bottle')}
+                onMouseLeave={() => setActivePreview(null)}
+                onFocus={() => setActivePreview('bottle')}
+                onBlur={() => setActivePreview(null)}
+                onClick={() => setActivePreview(activePreview === 'bottle' ? null : 'bottle')}
+              />
+               <button
+                className="hotspot"
+                style={{left:'50%', top:'70%', width:'10%', height:'22%'}}
+                aria-label="Bottle"
+                onMouseEnter={() => setActivePreview('bottle')}
+                onMouseLeave={() => setActivePreview(null)}
+                onFocus={() => setActivePreview('bottle')}
+                onBlur={() => setActivePreview(null)}
+                onClick={() => setActivePreview(activePreview === 'bottle' ? null : 'bottle')}
+              />
+              <button
+                className="hotspot"
+                style={{left:'68%', top:'65%', width:'10%', height:'22%'}}
+                aria-label="Bottle"
+                onMouseEnter={() => setActivePreview('bottle')}
+                onMouseLeave={() => setActivePreview(null)}
+                onFocus={() => setActivePreview('bottle')}
+                onBlur={() => setActivePreview(null)}
+                onClick={() => setActivePreview(activePreview === 'bottle' ? null : 'bottle')}
+              />
+              <button
+                className="hotspot"
+                style={{left:'18%', top:'66%', width:'10%', height:'22%'}}
+                aria-label="LED Panel"
+                onMouseEnter={() => setActivePreview('led')}
+                onMouseLeave={() => setActivePreview(null)}
+                onFocus={() => setActivePreview('led')}
+                onBlur={() => setActivePreview(null)}
+                onClick={() => setActivePreview(activePreview === 'led' ? null : 'led')}
+              />
+              <div className={`hotspot-preview ${activePreview ? 'show' : ''}`}>
+                <img src={previewSrcByKey[activePreview] || "/public/heroimg.png"} alt="Preview" />
               </div>
             </div>
           </div>
