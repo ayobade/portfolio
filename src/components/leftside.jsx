@@ -5,7 +5,7 @@ function Sidebar() {
     return (
         <aside className="sidebar">
           <div className="brand">
-            <img src="/public/logo.png" alt="Makinde Ayobade" className="desktop-logo" />
+            <img src="/logo.png" alt="Makinde Ayobade" className="desktop-logo" />
           </div>
         <nav className="nav">
           <a href="#intro">Intro</a>

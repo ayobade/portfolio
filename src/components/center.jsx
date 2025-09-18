@@ -20,11 +20,11 @@ function Center() {
       document.body.style.overflow = 'unset';
     };
   }, [isMenuOpen]);
-  const previewSrcByKey = {
-    kb: "/public/preview-kb.jpeg",
-    bottle: "/public/preview-bottle.jpeg",
-    led: "/public/preview-led.png",
-  };
+    const previewSrcByKey = {
+      kb: "/preview-kb.jpeg",
+      bottle: "/preview-bottle.jpeg",
+      led: "/preview-led.png",
+    };
   
   const copyEmailToClipboard = async () => {
     try {
@@ -46,7 +46,7 @@ function Center() {
         {/* Mobile Hamburger Menu */}
         <div className="mobile-menu">
           <div className="mobile-top-bar">
-            <img src="/public/logo.png" alt="Makinde Ayobade" className="mobile-top-logo" />
+              <img src="/logo.png" alt="Makinde Ayobade" className="mobile-top-logo" />
             <button 
               className="hamburger-btn"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -108,7 +108,7 @@ function Center() {
               </div>
               
               <div className="profile-section">
-                <img src="/public/heroimg.png" alt="Makinde Ayobade" className="profile-image" />
+                  <img src="/heroimg.png" alt="Makinde Ayobade" className="profile-image" />
               </div>
               
               <div className="latest-work">
@@ -139,7 +139,7 @@ function Center() {
                   </p>
                 </div>
           <div className="about-image">
-            <img src="/public/Dog.png" alt="Makinde's dog" />
+            <img src="/Dog.png" alt="Makinde's dog" />
           </div>
         </div>
       </section>
@@ -148,7 +148,7 @@ function Center() {
          <div className="projects-grid">
            <div className="project-card">
              <div className="project-image">
-               <img src="/public/Project1.png" alt="CrowdFundr" />
+               <img src="/Project1.png" alt="CrowdFundr" />
              </div>
              <div className="project-info">
                <div className="project-category">Crowdfunding • Community</div>
@@ -171,7 +171,7 @@ function Center() {
 
            <div className="project-card">
              <div className="project-image">
-               <img src="/public/Project2.png" alt="Ai Chatbot" />
+               <img src="/Project2.png" alt="Ai Chatbot" />
              </div>
              <div className="project-info">
                <div className="project-category">AI • Chatbot</div>
@@ -194,7 +194,7 @@ function Center() {
 
            <div className="project-card">
              <div className="project-image">
-               <img src="/public/Project3.png" alt="Highmax3D" />
+               <img src="/Project3.png" alt="Highmax3D" />
              </div>
              <div className="project-info">
                <div className="project-category">Movie • Tv Series</div>
@@ -217,7 +217,7 @@ function Center() {
 
            <div className="project-card">
              <div className="project-image">
-               <img src="/public/Project4.png" alt="Guess Game" />
+               <img src="/Project4.png" alt="Guess Game" />
              </div>
              <div className="project-info">
                <div className="project-category">Game • Guess</div>
@@ -240,7 +240,7 @@ function Center() {
 
            <div className="project-card">
              <div className="project-image">
-               <img src="/public/project6.png" alt="Nouvella" />
+               <img src="/project6.png" alt="Nouvella" />
              </div>
              <div className="project-info">
                <div className="project-category">Fashion • E-commerce</div>
@@ -263,7 +263,7 @@ function Center() {
 
            <div className="project-card">
              <div className="project-image">
-               <img src="/public/project7.png" alt="PlayHive" />
+               <img src="/project7.png" alt="PlayHive" />
              </div>
              <div className="project-info">
                <div className="project-category">Esport • Tournament</div>
@@ -300,7 +300,7 @@ function Center() {
           
           <div className="fun-gallery single">
             <div className="gallery-item hotspot-container">
-              <img src="/public/Fundesk.png" alt="Fun desk" />
+                <img src="/Fundesk.png" alt="Fun desk" />
               <button
                 className="hotspot"
                 style={{left:'63%', top:'10%', width:'10%', height:'22%'}}
@@ -362,7 +362,7 @@ function Center() {
                 onClick={() => setActivePreview(activePreview === 'led' ? null : 'led')}
               />
               <div className={`hotspot-preview ${activePreview ? 'show' : ''}`}>
-                <img src={previewSrcByKey[activePreview] || "/public/heroimg.png"} alt="Preview" />
+                  <img src={previewSrcByKey[activePreview] || "/heroimg.png"} alt="Preview" />
               </div>
             </div>
           </div>
