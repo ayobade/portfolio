@@ -365,7 +365,9 @@ function Center() {
                 onClick={() => setActivePreview(activePreview === 'headset' ? null : 'headset')}
               />
               <div className={`hotspot-preview ${activePreview ? 'show' : ''}`}>
-                  <img src={previewSrcByKey[activePreview] || "/heroimg.png"} alt="Preview" />
+                  {activePreview && previewSrcByKey[activePreview] && (
+                    <img src={previewSrcByKey[activePreview]} alt="Preview" />
+                  )}
               </div>
             </div>
           </div>
