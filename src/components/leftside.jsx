@@ -9,11 +9,10 @@ function Sidebar() {
           </div>
         <nav className="nav">
           <a href="#intro">Intro</a>
-          <a href="#work">ABOUT ME</a>
+          <a href="#about">About Me</a>
           <a href="#projects">Projects</a>
-          <a href="#projects">Services</a>
           <a href="#fun">Fun</a>
-         
+          <a href="#contact">Contact</a>
         </nav>
           <div className="social">
 

@@ -21,9 +21,12 @@ function Center() {
     };
   }, [isMenuOpen]);
     const previewSrcByKey = {
-      kb: "/preview-kb.jpeg",
-      bottle: "/preview-bottle.jpeg",
-      led: "/preview-led.png",
+      bottle: "/bottle.png",
+      game: "/game.png",
+      car: "/car.png",
+      camera: "/camera.png",
+      headset: "/headset.png",
+      image: "/image.png",
     };
   
   const copyEmailToClipboard = async () => {
@@ -64,7 +67,7 @@ function Center() {
                 <a href="#about" onClick={() => setIsMenuOpen(false)}>ABOUT ME</a>
                 <a href="#projects" onClick={() => setIsMenuOpen(false)}>PROJECTS</a>
                 <a href="#fun" onClick={() => setIsMenuOpen(false)}>FUN</a>
-               
+                <a href="#contact" onClick={() => setIsMenuOpen(false)}>CONTACT</a>
               </nav>
               <div className="mobile-hire-section">
                 <a href="#contact" className="mobile-hire-btn" onClick={() => setIsMenuOpen(false)}>
@@ -111,7 +114,7 @@ function Center() {
                   <img src="/heroimg.png" alt="Makinde Ayobade" className="profile-image" />
               </div>
               
-              <div className="latest-work">
+              <div className="latest-work" onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}>
                 <div className="work-title">MAKINDE'S</div>
                 <div className="latest-label">LATEST WORK</div>
               </div>
@@ -148,7 +151,7 @@ function Center() {
          <div className="projects-grid">
            <div className="project-card">
              <div className="project-image">
-               <img src="/Project1.png" alt="CrowdFundr" />
+               <img src="/project1.png" alt="CrowdFundr" />
              </div>
              <div className="project-info">
                <div className="project-category">Crowdfunding • Community</div>
@@ -194,7 +197,7 @@ function Center() {
 
            <div className="project-card">
              <div className="project-image">
-               <img src="/Project3.png" alt="Highmax3D" />
+               <img src="/project3.png" alt="Highmax3D" />
              </div>
              <div className="project-info">
                <div className="project-category">Movie • Tv Series</div>
@@ -217,7 +220,7 @@ function Center() {
 
            <div className="project-card">
              <div className="project-image">
-               <img src="/Project4.png" alt="Guess Game" />
+               <img src="/project4.png" alt="Guess Game" />
              </div>
              <div className="project-info">
                <div className="project-category">Game • Guess</div>
@@ -231,7 +234,7 @@ function Center() {
                  <span className="tech-tag">JavaScript</span>
                </div>
                <div className="project-links">
-                 <a href="https://github.com/ayobade/guess_game" target="_blank" rel="noopener noreferrer" className="project-link">
+                 <a href="https://guessggame.netlify.app/" target="_blank" rel="noopener noreferrer" className="project-link">
                    View Project →
                  </a>
                </div>
@@ -304,12 +307,12 @@ function Center() {
               <button
                 className="hotspot"
                 style={{left:'63%', top:'10%', width:'10%', height:'22%'}}
-                aria-label="Keyboard"
-                onMouseEnter={() => setActivePreview('kb')}
+                aria-label="Game"
+                onMouseEnter={() => setActivePreview('game')}
                 onMouseLeave={() => setActivePreview(null)}
-                onFocus={() => setActivePreview('kb')}
+                onFocus={() => setActivePreview('game')}
                 onBlur={() => setActivePreview(null)}
-                onClick={() => setActivePreview(activePreview === 'kb' ? null : 'kb')}
+                onClick={() => setActivePreview(activePreview === 'game' ? null : 'game')}
               />
               <button
                 className="hotspot"
@@ -324,42 +327,42 @@ function Center() {
               <button
                 className="hotspot"
                 style={{left:'50%', top:'45%', width:'10%', height:'22%'}}
-                aria-label="Bottle"
-                onMouseEnter={() => setActivePreview('bottle')}
+                aria-label="Image"
+                onMouseEnter={() => setActivePreview('image')}
                 onMouseLeave={() => setActivePreview(null)}
-                onFocus={() => setActivePreview('bottle')}
+                onFocus={() => setActivePreview('image')}
                 onBlur={() => setActivePreview(null)}
-                onClick={() => setActivePreview(activePreview === 'bottle' ? null : 'bottle')}
+                onClick={() => setActivePreview(activePreview === 'image' ? null : 'image')}
               />
                <button
                 className="hotspot"
                 style={{left:'50%', top:'70%', width:'10%', height:'22%'}}
-                aria-label="Bottle"
-                onMouseEnter={() => setActivePreview('bottle')}
+                aria-label="Car"
+                onMouseEnter={() => setActivePreview('car')}
                 onMouseLeave={() => setActivePreview(null)}
-                onFocus={() => setActivePreview('bottle')}
+                onFocus={() => setActivePreview('car')}
                 onBlur={() => setActivePreview(null)}
-                onClick={() => setActivePreview(activePreview === 'bottle' ? null : 'bottle')}
+                onClick={() => setActivePreview(activePreview === 'car' ? null : 'car')}
               />
               <button
                 className="hotspot"
                 style={{left:'68%', top:'65%', width:'10%', height:'22%'}}
-                aria-label="Bottle"
-                onMouseEnter={() => setActivePreview('bottle')}
+                aria-label="Camera"
+                onMouseEnter={() => setActivePreview('camera')}
                 onMouseLeave={() => setActivePreview(null)}
-                onFocus={() => setActivePreview('bottle')}
+                onFocus={() => setActivePreview('camera')}
                 onBlur={() => setActivePreview(null)}
-                onClick={() => setActivePreview(activePreview === 'bottle' ? null : 'bottle')}
+                onClick={() => setActivePreview(activePreview === 'camera' ? null : 'camera')}
               />
               <button
                 className="hotspot"
                 style={{left:'18%', top:'66%', width:'10%', height:'22%'}}
-                aria-label="LED Panel"
-                onMouseEnter={() => setActivePreview('led')}
+                aria-label="Headset"
+                onMouseEnter={() => setActivePreview('headset')}
                 onMouseLeave={() => setActivePreview(null)}
-                onFocus={() => setActivePreview('led')}
+                onFocus={() => setActivePreview('headset')}
                 onBlur={() => setActivePreview(null)}
-                onClick={() => setActivePreview(activePreview === 'led' ? null : 'led')}
+                onClick={() => setActivePreview(activePreview === 'headset' ? null : 'headset')}
               />
               <div className={`hotspot-preview ${activePreview ? 'show' : ''}`}>
                   <img src={previewSrcByKey[activePreview] || "/heroimg.png"} alt="Preview" />
