@@ -373,17 +373,17 @@ function Center() {
       </section>
       <section id="contact" className="contact-section">
         <div className="contact-content">
-          <div className="contact-item">
-            <h2>BOOK CALL</h2>
-            <p>Via Calendly</p>
-          </div>
+            <div className="contact-item">
+              <h2><a href="https://calendly.com/ayobademakinde/30min" target="_blank" rel="noopener noreferrer">BOOK CALL</a></h2>
+              <p>Via Calendly</p>
+            </div>
 
            <div className="contact-item" onClick={copyEmailToClipboard}>
              <h2>
                {copyText}
                {showCheckmark && <span className="checkmark">✓</span>}
              </h2>
-             <p>ayobademakinde@example.com</p>
+             <p>ayobademakinde@gmail.com</p>
            </div>
 
           <div className="contact-divider"></div>
