@@ -1,10 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Center() {
   const texts = ["PRODUCT DESIGN.", "WEB DEVELOPMENT.", "3D MODELLING"];
   const [copyText, setCopyText] = useState("COPY EMAIL");
   const [showCheckmark, setShowCheckmark] = useState(false);
   const [activePreview, setActivePreview] = useState(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    
+    // Cleanup function to restore scroll when component unmounts
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
   const previewSrcByKey = {
     kb: "/public/preview-kb.jpeg",
     bottle: "/public/preview-bottle.jpeg",
@@ -28,6 +43,48 @@ function Center() {
 
     return (
         <main className="content">
+        {/* Mobile Hamburger Menu */}
+        <div className="mobile-menu">
+          <div className="mobile-top-bar">
+            <img src="/public/logo.png" alt="Makinde Ayobade" className="mobile-top-logo" />
+            <button 
+              className="hamburger-btn"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? '[CLOSE]' : '[MENU]'}
+            </button>
+          </div>
+          
+          <div className={`mobile-nav ${isMenuOpen ? 'open' : ''}`}>
+            <div className="mobile-nav-content">
+              <div className="mobile-brand"></div>
+              <nav className="mobile-nav-links">
+                <a href="#intro" onClick={() => setIsMenuOpen(false)}>INTRO</a>
+                <a href="#about" onClick={() => setIsMenuOpen(false)}>ABOUT ME</a>
+                <a href="#projects" onClick={() => setIsMenuOpen(false)}>PROJECTS</a>
+                <a href="#fun" onClick={() => setIsMenuOpen(false)}>FUN</a>
+               
+              </nav>
+              <div className="mobile-hire-section">
+                <a href="#contact" className="mobile-hire-btn" onClick={() => setIsMenuOpen(false)}>
+                  HIRE ME
+                </a>
+              </div>
+              <div className="mobile-social">
+                <div className="social-row">
+                  
+                  <a href="#">Twitter (X)</a>
+                  <a href="#">Linkedin</a>
+                  <a href="#">Github</a>
+                  <a href="#">Behance</a>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+
         <section id="intro" className="intro-section">
           <div className="intro-layout">
             
@@ -55,8 +112,8 @@ function Center() {
               </div>
               
               <div className="latest-work">
-                <div className="latest-label">LATEST WORK</div>
                 <div className="work-title">MAKINDE'S</div>
+                <div className="latest-label">LATEST WORK</div>
               </div>
             </div>
             
@@ -66,27 +123,21 @@ function Center() {
         </section>
       <section id="about" className="about-section">
         <div className="about-content">
-          <div className="about-text">
-            <h2>ABOUT.</h2>
-            <p>
-              Makinde, a Product Designer with a background in sales, blending
-              empathy, problem-solving, and storytelling into user-centered
-              design.
-            </p>
-            <p>
-              I design iOS mobile apps, desktop apps, and websites. I've worked
-              across fintech, biotech and telecom. I adapt ideas into intuitive
-              experiences.
-            </p>
-            <p>
-              I believe beauty builds trust, simplicity unlocks usability, and
-              great questions lead to better outcomes.
-            </p>
-            <p>
-              For me, design is about bringing ideas to life in ways that make
-              people's everyday easier and empower them.
-            </p>
-          </div>
+                <div className="about-text">
+                  <h2>About Me.</h2>
+                  <p>
+                    Hey, I'm Makinde Ayobade a designer & developer who enjoys turning wild ideas into sleek, functional digital experiences.
+                  </p>
+                  <p>
+                    I spend my days crafting clean, accessible interfaces that feel like home, and my nights bringing them to life with lines of code (sometimes fueled by too much coffee, sometimes by too many game respawns).
+                  </p>
+                  <p>
+                    I'm big on details, pixel-perfect layouts, smooth interactions, and experiences that don't just work but feel right. Outside the screen, you'll catch me gaming, learning new tricks, or geeking out over fast cars.
+                  </p>
+                  <p>
+                    If you're working on something fun, challenging, or just in need of a creative spark, let's talk, I love projects that push boundaries.
+                  </p>
+                </div>
           <div className="about-image">
             <img src="/public/Dog.png" alt="Makinde's dog" />
           </div>
@@ -94,125 +145,126 @@ function Center() {
       </section>
        <section id="projects" className="projects-section">
          <h2 className="section-title">Projects</h2>
-         <div className="project-container">
-           <div className="project-visual">
-            <img src="/public/Project1.png" alt="Project 1" />
+         <div className="projects-grid">
+           <div className="project-card">
+             <div className="project-image">
+               <img src="/public/Project1.png" alt="CrowdFundr" />
+             </div>
+             <div className="project-info">
+               <div className="project-category">Crowdfunding • Community</div>
+               <div className="project-title-row">
+                 <h3 className="project-title">CrowdFundr</h3>
+                 <span className="project-year">• 2025</span>
+               </div>
+               <div className="tech-stack">
+                 <span className="tech-tag">HTML</span>
+                 <span className="tech-tag">CSS</span>
+                 <span className="tech-tag">JavaScript</span>
+               </div>
+             </div>
            </div>
-           
-           <div className="project-details">
-             <h2>Specify - Web Design</h2>
-             <div className="work-experience">
-               <h4>Work Experience</h4>
-               <span className="duration">2021 - 2024</span>
+
+           <div className="project-card">
+             <div className="project-image">
+               <img src="/public/Project2.png" alt="Ai Chatbot" />
              </div>
-             
-             <div className="project-description">
-               <p>From 2021 to 2024, I have been a Motion Designer at Specify, where I was brought on to develop a 3D identity and promote new feature launches.</p>
-               
-               <p>As the sole 3D nerd on the team, I built an extensive library of highly customizable assets and created an optimized render pipeline to distribute these assets across web pages, social media, and the product itself, in the fastest way possible.</p>
-               
-               <p>This role taught me to excel under tight deadlines.</p>
-               
-               <p>I also contributed to the website, refining my ability to craft cool looking and innovative assets. During this time, I gained extensive experience with tools like Figma, Spline, Lottie, Rive, React Three Fiber and Framer.</p>
-               
-               <p>Heck, we even had a framer award for this page.</p>
+             <div className="project-info">
+               <div className="project-category">AI • Chatbot</div>
+               <div className="project-title-row">
+                 <h3 className="project-title">Ai Chatbot</h3>
+                 <span className="project-year">• 2025</span>
+               </div>
+               <div className="tech-stack">
+                 <span className="tech-tag">HTML</span>
+                 <span className="tech-tag">CSS</span>
+                 <span className="tech-tag">JavaScript</span>
+               </div>
              </div>
-             
-             <button className="next-project-btn">
-               View Project →
-             </button>
+           </div>
+
+           <div className="project-card">
+             <div className="project-image">
+               <img src="/public/Project3.png" alt="Highmax3D" />
+             </div>
+             <div className="project-info">
+               <div className="project-category">Movie • Tv Series</div>
+               <div className="project-title-row">
+                 <h3 className="project-title">Highmax3D</h3>
+                 <span className="project-year">• 2025</span>
+               </div>
+               <div className="tech-stack">
+                 <span className="tech-tag">HTML</span>
+                 <span className="tech-tag">CSS</span>
+                 <span className="tech-tag">JavaScript</span>
+               </div>
+             </div>
+           </div>
+
+           <div className="project-card">
+             <div className="project-image">
+               <img src="/public/Project4.png" alt="Guess Game" />
+             </div>
+             <div className="project-info">
+               <div className="project-category">Game • Guess</div>
+               <div className="project-title-row">
+                 <h3 className="project-title">Guess Game</h3>
+                 <span className="project-year">• 2025</span>
+               </div>
+               <div className="tech-stack">
+                 <span className="tech-tag">HTML</span>
+                 <span className="tech-tag">CSS</span>
+                 <span className="tech-tag">JavaScript</span>
+               </div>
+             </div>
+           </div>
+
+           <div className="project-card">
+             <div className="project-image">
+               <img src="/public/project6.png" alt="Figma Design 1" />
+             </div>
+             <div className="project-info">
+               <div className="project-category">Fashion • E-commerce</div>
+               <div className="project-title-row">
+                 <h3 className="project-title">Nouvella</h3>
+                 <span className="project-year">• 2025</span>
+               </div>
+               <div className="tech-stack">
+                 <span className="tech-tag">Figma</span>
+                 <span className="tech-tag">Design System</span>
+                 <span className="tech-tag">Prototyping</span>
+               </div>
+             </div>
+           </div>
+
+           <div className="project-card">
+             <div className="project-image">
+               <img src="/public/project7.png" alt="Figma Design 2" />
+             </div>
+             <div className="project-info">
+               <div className="project-category">Esport • Tournament</div>
+               <div className="project-title-row">
+                 <h3 className="project-title">PlayHive</h3>
+                 <span className="project-year">• 2025</span>
+               </div>
+               <div className="tech-stack">
+                 <span className="tech-tag">Figma</span>
+                 <span className="tech-tag">Mobile Design</span>
+                 <span className="tech-tag">User Research</span>
+               </div>
+             </div>
            </div>
          </div>
-
-         <div className="project-container">
-           <div className="project-visual">
-            <img src="/public/Project1.png" alt="Project 2" />
-           </div>
-           
-           <div className="project-details">
-             <h2>E-commerce Platform - Web Development</h2>
-             <div className="work-experience">
-               <h4>Freelance Project</h4>
-               <span className="duration">2023 - 2024</span>
-             </div>
-             
-             <div className="project-description">
-               <p>Developed a full-stack e-commerce platform with modern React frontend and Node.js backend.</p>
-               
-               <p>Implemented responsive design, payment integration, user authentication, and admin dashboard with real-time inventory management.</p>
-               
-               <p>Used technologies including React, Node.js, MongoDB, Stripe API, and deployed on AWS with CI/CD pipeline.</p>
-               
-               <p>The platform handles over 1000+ daily transactions with 99.9% uptime and has received positive feedback from users.</p>
-             </div>
-             
-             <button className="next-project-btn">
-               View Project →
-             </button>
-           </div>
-         </div>
-
-         <div className="project-container">
-           <div className="project-visual">
-            <img src="/public/Project1.png" alt="Project 3" />
-           </div>
-           
-           <div className="project-details">
-             <h2>3D Architectural Visualization</h2>
-             <div className="work-experience">
-               <h4>Client Project</h4>
-               <span className="duration">2022 - 2023</span>
-             </div>
-             
-             <div className="project-description">
-               <p>Created photorealistic 3D architectural visualizations for luxury residential and commercial projects.</p>
-               
-               <p>Specialized in interior design visualization, lighting design, and material texturing using Blender and Cinema 4D.</p>
-               
-               <p>Delivered interactive 360° virtual tours and VR experiences for client presentations.</p>
-               
-               <p>Worked with architects and interior designers to bring their concepts to life with stunning visual fidelity.</p>
-             </div>
-             
-             <button className="next-project-btn">
-               View Project →
-             </button>
-           </div>
-         </div>
-
-         <div className="project-container">
-           <div className="project-visual">
-            <img src="/public/Project1.png" alt="Project 4" />
-           </div>
-           
-           <div className="project-details">
-             <h2>Mobile App Design - Fintech</h2>
-             <div className="work-experience">
-               <h4>Product Design</h4>
-               <span className="duration">2023 - 2024</span>
-             </div>
-             
-             <div className="project-description">
-               <p>Designed a comprehensive fintech mobile application focusing on user experience and accessibility.</p>
-               
-               <p>Created wireframes, prototypes, and design systems using Figma, with emphasis on security and ease of use.</p>
-               
-               <p>Conducted user research and usability testing to optimize the onboarding flow and transaction processes.</p>
-               
-               <p>The app achieved a 4.8/5 rating on app stores and increased user engagement by 40%.</p>
-             </div>
-             
-             <button className="next-project-btn">
-               View Project →
-             </button>
-           </div>
+         <div className="view-all-projects">
+           <button className="view-all-btn">
+             View All Projects →
+           </button>
          </div>
        </section>
       <section id="fun" className="fun-section">
         <h2 className="section-title">Fun</h2>
         <div className="fun-content">
           <div className="fun-text">
-            <p className="fun-intro">I'm probably deep into a video game, catching up on Formula 1 races, building the ultimate music playlist, or soaking in some fresh air outdoors.</p>
+            <p className="fun-intro">When i'm not working, I'm probably deep into a video game, catching up on Formula 1 races, building the ultimate music playlist, or soaking in some fresh air outdoors.</p>
             <p className="fun-outro">Whether it's screen time or sunshine, I like to keep things fun and fast-paced. 🎮🏎️🎧</p>
           </div>
           

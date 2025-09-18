@@ -3,8 +3,10 @@ import React from 'react'
 
 function Sidebar() {
     return (
-      <aside className="sidebar">
-        <div className="brand">Makinde Ayobade</div>
+        <aside className="sidebar">
+          <div className="brand">
+            <img src="/public/logo.png" alt="Makinde Ayobade" className="desktop-logo" />
+          </div>
         <nav className="nav">
           <a href="#intro">Intro</a>
           <a href="#work">ABOUT ME</a>
