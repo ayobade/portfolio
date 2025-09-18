@@ -1,12 +1,36 @@
-# React + Vite
+## Makinde Ayobade — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio built with React and Vite. Showcases projects, skills, and interests with a responsive layout and smooth interactions.
 
-Currently, two official plugins are available:
+### Tech Stack
+- React (Vite)
+- CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Getting Started
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start development server:
+   ```bash
+   npm run dev
+   ```
+3. Build for production:
+   ```bash
+   npm run build
+   ```
+4. Preview production build:
+   ```bash
+   npm run preview
+   ```
 
-## Expanding the ESLint configuration
+### Project Structure
+- `src/components/leftside.jsx`: Sidebar navigation and social links
+- `src/components/center.jsx`: Main content sections (Intro, About, Projects, Fun, Contact)
+- `src/App.css`: Global styles and responsive rules
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Assets
+Place images in `public/` and reference them with absolute paths like `/heroimg.png`.
+
+### License
+MIT

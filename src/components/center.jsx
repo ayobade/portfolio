@@ -7,15 +7,12 @@ function Center() {
   const [activePreview, setActivePreview] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Prevent body scroll when menu is open
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
     }
-    
-    // Cleanup function to restore scroll when component unmounts
     return () => {
       document.body.style.overflow = 'unset';
     };
@@ -46,7 +43,6 @@ function Center() {
 
     return (
         <main className="content">
-        {/* Mobile Hamburger Menu */}
         <div className="mobile-menu">
           <div className="mobile-top-bar">
               <img src="/logo.png" alt="Makinde Ayobade" className="mobile-top-logo" />
