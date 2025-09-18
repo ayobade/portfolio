@@ -284,9 +284,7 @@ function Center() {
            </div>
          </div>
          <div className="view-all-projects">
-           <button className="view-all-btn">
-             View All Projects →
-           </button>
+          
          </div>
        </section>
       <section id="fun" className="fun-section">
