@@ -15,14 +15,14 @@ function Sidebar() {
           <a href="#fun">Fun</a>
          
         </nav>
-        <div className="social">
-        
-          <a href="#">Twitter (X)</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">Github</a>
-          <a href="#">Behance</a>
-         
-        </div>
+          <div className="social">
+
+            <a href="https://x.com/AyobadeMakinde" target="_blank" rel="noopener noreferrer">Twitter (X)</a>
+            <a href="https://www.linkedin.com/in/ayobade-makinde/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/ayobade" target="_blank" rel="noopener noreferrer">Github</a>
+            <a href="https://www.behance.net/ayobademakinde" target="_blank" rel="noopener noreferrer">Behance</a>
+
+          </div>
       </aside>
     )
   }

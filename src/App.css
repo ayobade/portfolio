@@ -508,6 +508,24 @@
   border-color: rgba(255, 255, 255, 0.3);
 }
 
+.project-links {
+  margin-top: 16px;
+}
+
+.project-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.project-link:hover {
+  color: #cccccc;
+}
+
 .view-all-projects {
   display: flex;
   justify-content: center;

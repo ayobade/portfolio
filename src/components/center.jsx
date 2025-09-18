@@ -74,10 +74,10 @@ function Center() {
               <div className="mobile-social">
                 <div className="social-row">
                   
-                  <a href="#">Twitter (X)</a>
-                  <a href="#">Linkedin</a>
-                  <a href="#">Github</a>
-                  <a href="#">Behance</a>
+                  <a href="https://x.com/AyobadeMakinde" target="_blank" rel="noopener noreferrer">Twitter (X)</a>
+                  <a href="https://www.linkedin.com/in/ayobade-makinde/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                  <a href="https://github.com/ayobade" target="_blank" rel="noopener noreferrer">Github</a>
+                  <a href="https://www.behance.net/ayobademakinde" target="_blank" rel="noopener noreferrer">Behance</a>
                 </div>
                
               </div>
@@ -161,6 +161,11 @@ function Center() {
                  <span className="tech-tag">CSS</span>
                  <span className="tech-tag">JavaScript</span>
                </div>
+               <div className="project-links">
+                 <a href="https://github.com/ayobade/Fundr" target="_blank" rel="noopener noreferrer" className="project-link">
+                   View Project →
+                 </a>
+               </div>
              </div>
            </div>
 
@@ -178,6 +183,11 @@ function Center() {
                  <span className="tech-tag">HTML</span>
                  <span className="tech-tag">CSS</span>
                  <span className="tech-tag">JavaScript</span>
+               </div>
+               <div className="project-links">
+                 <a href="https://github.com/ayobade/AI-Chatbot" target="_blank" rel="noopener noreferrer" className="project-link">
+                   View Project →
+                 </a>
                </div>
              </div>
            </div>
@@ -197,6 +207,11 @@ function Center() {
                  <span className="tech-tag">CSS</span>
                  <span className="tech-tag">JavaScript</span>
                </div>
+               <div className="project-links">
+                 <a href="https://github.com/ayobade/HighMax3D" target="_blank" rel="noopener noreferrer" className="project-link">
+                   View Project →
+                 </a>
+               </div>
              </div>
            </div>
 
@@ -215,12 +230,17 @@ function Center() {
                  <span className="tech-tag">CSS</span>
                  <span className="tech-tag">JavaScript</span>
                </div>
+               <div className="project-links">
+                 <a href="https://github.com/ayobade/guess_game" target="_blank" rel="noopener noreferrer" className="project-link">
+                   View Project →
+                 </a>
+               </div>
              </div>
            </div>
 
            <div className="project-card">
              <div className="project-image">
-               <img src="/public/project6.png" alt="Figma Design 1" />
+               <img src="/public/project6.png" alt="Nouvella" />
              </div>
              <div className="project-info">
                <div className="project-category">Fashion • E-commerce</div>
@@ -233,12 +253,17 @@ function Center() {
                  <span className="tech-tag">Design System</span>
                  <span className="tech-tag">Prototyping</span>
                </div>
+               <div className="project-links">
+                 <a href="https://www.behance.net/gallery/222071613/Nouvela-A-fashion-E-commerce-Website-design" target="_blank" rel="noopener noreferrer" className="project-link">
+                   View Project →
+                 </a>
+               </div>
              </div>
            </div>
 
            <div className="project-card">
              <div className="project-image">
-               <img src="/public/project7.png" alt="Figma Design 2" />
+               <img src="/public/project7.png" alt="PlayHive" />
              </div>
              <div className="project-info">
                <div className="project-category">Esport • Tournament</div>
@@ -250,6 +275,11 @@ function Center() {
                  <span className="tech-tag">Figma</span>
                  <span className="tech-tag">Mobile Design</span>
                  <span className="tech-tag">User Research</span>
+               </div>
+               <div className="project-links">
+                 <a href="https://www.behance.net/gallery/222071969/PlayHive-A-Next-Gen-eSports-Tournament-Platform" target="_blank" rel="noopener noreferrer" className="project-link">
+                   View Project →
+                 </a>
                </div>
              </div>
            </div>
@@ -355,14 +385,14 @@ function Center() {
 
           <div className="contact-divider"></div>
 
-          <div className="social-links">
-            <div className="social-row">
-              <a href="#">Twitter (X)</a>
-              <a href="#">LinkedIn</a>
-              <a href="#">Github</a>
-              <a href="#">Behance</a>
+            <div className="social-links">
+              <div className="social-row">
+                <a href="https://x.com/AyobadeMakinde" target="_blank" rel="noopener noreferrer">Twitter (X)</a>
+                <a href="https://www.linkedin.com/in/ayobade-makinde/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/ayobade" target="_blank" rel="noopener noreferrer">Github</a>
+                <a href="https://www.behance.net/ayobademakinde" target="_blank" rel="noopener noreferrer">Behance</a>
+              </div>
             </div>
-          </div>
         </div>
       </section>
         </main>
